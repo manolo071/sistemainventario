@@ -1,0 +1,751 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>StockPile</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Techvillage">
+	<meta name="copyright" content="Techvillage">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2017-01-09T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-stockpile">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#server_requirements" title="Server Requirements">Server Requirements</a></li>
+			<li><a href="#installation" title="Installation">Installation</a></li>
+			<li><a href="#dashboard" title="Dashboard">Dashboard</a></li>
+			<li><a href="#items" title="Items">Items</a></li>
+			<li><a href="#purchase" title="Purchase">Purchase</a></li>
+			<li><a href="#sales" title="Sales">Sales</a></li>
+			<li><a href="#customers" title="Customers">Customers</a></li>
+			<li><a href="#customer_panel" title="Customer Panel">Customer Panel</a></li>
+			<li><a href="#suppliers" title="Suppliers ">Suppliers </a></li>
+			<li><a href="#reports" title="Reports">Reports</a></li>
+			<li><a href="#settings" title="Settings">Settings</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Techvillage 2017<br>
+		made with the <a href="">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>StockPile</h1>
+	
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 01/03/2017</li>
+	<li>latest update: 01/9/2017</li>
+	<li>by: Techvillage</li>
+	<li><a href="codelatin.com">codelatin.com</a></li>
+	
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="server_requirements">
+	<div class="page-header"><h3>Server Requirements</h3><hr class="notop"></div>
+<p>
+	MySQL -&nbsp;4.x &amp; 5.x</p>
+<p>
+	PHP &gt;= 5.6</p>
+<p>
+	OpenSSL PHP Extension</p>
+<p>
+	PDO PHP Extension</p>
+<p>
+	Mbstring PHP Extension</p>
+<p>
+	Tokenizer PHP Extension</p>
+<p>
+	XML PHP Extension</p>
+</section>
+<section id="installation">
+	<div class="page-header"><h3>Installation</h3><hr class="notop"></div>
+<p>
+	&nbsp;Total Installation process done by following four steps.</p>
+<p>
+	1. Create a database in your server.</p>
+<p>
+	2. Upload Imported files to your sever.</p>
+<p>
+	3. Input Database information .</p>
+<p>
+	4. Input Login details to set login information for this site.</p>
+<p>
+	Database installation steps:</p>
+<p>
+	STEP 1 :</p>
+<p>
+	Input all required information shows in figure to complete this step and submit to procced.</p>
+<p>
+	Company name: Input your company name here.</p>
+<p>
+	Database Name: Write your database name where you want your application to be stored.</p>
+<p>
+	User Name: Provide a user name to log in your database.</p>
+<p>
+	Password: Input your database password here.</p>
+<p>
+	Host Name: &nbsp;Please make sure that it is your Localhost and if doesn&#39;t work ask your hoster.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_1.png"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_2.png" style="width: 681px; height: 509px;"></p>
+<p>
+	STEP 2 :</p>
+<p>
+	Administrator creation.</p>
+<p>
+	<span style="color: rgb(29, 33, 41); font-family: helvetica, arial, sans-serif; white-space: pre-wrap;">Input a administrator name , email address and password and submit to complete installation.</span></p>
+<p>
+	<span style="color: rgb(29, 33, 41); font-family: helvetica, arial, sans-serif; white-space: pre-wrap;">Name: Set your administrator name here.</span></p>
+<p>
+	Email: Set a unique email address for a individual user.</p>
+<p>
+	Password: Create a password to further login.</p>
+<p>
+	<img alt="" src="assets/images/image_3.png" style="width: 696px; height: 440px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_4.png"></p>
+<p>
+	LOGIN:</p>
+<p>
+	Please provide administrator information to login .</p>
+<p>
+	Company: Select your company name from which you want to browse.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_5.png" style="width: 491px; height: 442px;"></p>
+</section>
+<section id="dashboard">
+	<div class="page-header"><h3>Dashboard</h3><hr class="notop"></div>
+<div>
+	Graphical DASHBOARD with overview of monthly sales , cost of products and profit values for all products.&nbsp;</div>
+<div>
+	Shows latest payments , invoices , order to onvoice and order to ship lists.&nbsp;</div>
+<div>
+	Customers &amp; Suppliers records. Bulk import and export through CSV file.</div>
+<div>
+	Settings for unit, items category,&nbsp;user, role,&nbsp;user and location of stock for his/her company.&nbsp;</div>
+<div>
+	Create roles for users.</div>
+<div>
+	Multi user with multiple roles.</div>
+<div>
+	Multi Company with individual database for each company.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_13.png" style="width: 1009px; height: 766px;"></div>
+</section>
+<section id="items">
+	<div class="page-header"><h3>Items</h3><hr class="notop"></div>
+<div>
+	Items are the products that you sell to various clients and can be purchased from various vendors in a business. Items are associated with Item categories.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_20.png" style="width: 1096px; height: 521px;"></div>
+<div>
+	<strong>Purpose</strong>:&nbsp;Add / Edit / Delete/Copy Items of Inventory.</div>
+<div>
+	<strong>Procedure:</strong> Complete item entry is done by five steps.</div>
+<div>
+	<strong>General settings:&nbsp;</strong></div>
+<div>
+	Item Code:&nbsp; Not changeable later - unique identifier for an Item.</div>
+<div>
+	Name: Name of the Item.</div>
+<div>
+	Description: Full/short description of the Item.</div>
+<div>
+	Category: The category to which the Item belongs. You can create your own&nbsp;Item categories which define relevant units only.</div>
+<div>
+	Item Tax type: Select relevant item tax type.</div>
+<div>
+	Item Image: Upload item image in PNG and JPEG format only.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_17.png" style="width: 564px; height: 634px;"></div>
+<div>
+	<strong>Sales pricing:</strong></div>
+<div>
+	Assign sale prices to individual sales&nbsp;Items by sales type. Use them in sales invoices.</div>
+<div>
+	Sales type: Add sales type first.</div>
+<div>
+	Price: Select price for specific sales type.</div>
+<div>
+	Action: Edit only.&nbsp;<strong>&nbsp;</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong><img alt="" src="assets/images/image_27.png" style="width: 552px; height: 250px;"></strong></div>
+<div>
+	<strong>Purchase pricing:</strong></div>
+<div>
+	Like sales pricing assign purchase prices to individual purchase item for specific supplier. And finally the supplier invoice contains the same info as they receive and the price can be changed, in which case the purchasing data is updated again.&nbsp;</div>
+<div>
+	Supplier: For every Item you can have one or more suppliers for this particular Item (chose from drop down list).</div>
+<div>
+	Price: keep entry of purchase price for each item from that specific supplier. &nbsp; &nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_24.png" style="width: 557px; height: 197px;"></div>
+<div>
+	<strong>Transaction:</strong></div>
+<div>
+	Shows each transaction history of an item with date and quantity.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_35.png"></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>Status: </strong></div>
+<div>
+	When user create an item , it will shows stock status for all location for this company with quantity of item available.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<img alt="" src="assets/images/image_33.png"></div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="purchase">
+	<div class="page-header"><h3>Purchase</h3><hr class="notop"></div>
+<p>
+	A purchase order is an official document that you issue to your vendors, indicating relevant information about what you want to buy, the quantity, the price agreed for that particular product or service.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_26.png" style="width: 609px; height: 253px;"></p>
+<p>
+	Purpose</p>
+<p>
+	Purchase Order Entry is used to register all purchase orders in the system. A purchase invoice you create to record a delivery of items made by a vendor to your warehouse. This is your way of recording the items and delivery notes you have received from your vendors for the purchases made by you.</p>
+<p>
+	Procedure</p>
+<ul>
+	<li>
+		Select a Supplier;</li>
+	<li>
+		Select a store location;</li>
+	<li>
+		Reference&nbsp;number will generate automatically.</li>
+	<li>
+		select items, supply quantity and click&nbsp;Add Item</li>
+	<li>
+		Write note of purchase order.</li>
+	<li>
+		Submit your order.</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	Permission:</p>
+<p>
+	User will have permission to View, Edit and delete purchase order.&nbsp; User can print, Download PDF, edit or delete invoice.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_25.png" style="width: 600px; height: 549px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="sales">
+	<div class="page-header"><h3>Sales</h3><hr class="notop"></div>
+<p>
+	The inventory system is very flexible in the way it can handle sales, from complete integration with a purchase process to just issuing invoices.</p>
+<p>
+	You can use the complete sales process or just the steps you require&nbsp;&nbsp; depending on your operation. The menu options below are annotated with suggestions as to which Department would use them.</p>
+<p>
+	&nbsp; Sales order</p>
+<p>
+	&nbsp; Invoice</p>
+<p>
+	&nbsp; Payment</p>
+<p>
+	&nbsp; Shipment</p>
+<p>
+	<strong>Sales order: </strong>&nbsp; &nbsp;</p>
+<p>
+	A sales order is a financial document that confirms an impending sale. It details the exact quantity, price and delivery details of the products or services being sold.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_30.png" style="width: 702px; height: 435px;"></p>
+<div>
+	<strong>Purpose</strong></div>
+<div>
+	To create Sales orders and thereon to view, modify&nbsp;and print them.</div>
+<div>
+	<strong>Procedure</strong></div>
+<div>
+	The Reference Field is generated automatically. Before a Quote can be created, you must previous have setup one each of the following:</div>
+<ol>
+	<li>
+		<a href="http://frontaccounting.com/fawiki/index.php?n=Help.Items">I</a>tem</li>
+	<li>
+		Customer</li>
+	<li>
+		Customer Branch</li>
+	<li>
+		Sales type</li>
+	<li>
+		Payment type</li>
+	<li>
+		Location</li>
+</ol>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp;Then,</p>
+<ul>
+	<li>
+		Select a Customer;</li>
+	<li>
+		Select a store location;</li>
+	<li>
+		Reference&nbsp;number will generate automatically.</li>
+	<li>
+		select items, supply quantity and click&nbsp;Add Item</li>
+	<li>
+		Write note of sales order.</li>
+	<li>
+		Submit your order.</li>
+</ul>
+<p>
+	&nbsp; You can also maintain items &amp; customers in separate browser window but page refresh may be required to update.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_29.png" style="width: 850px; height: 551px;"></p>
+<p>
+	<strong>Notes:</strong>Sales order are not related to item stock, user can make sales order for available or empty stock.</p>
+<p>
+	<strong>Invoice:</strong></p>
+<p>
+	An Invoice is a document sent to your client that indicates the products/services sold by you with the payment information that the client has to make.&nbsp;This method allows you to create an invoice directly, by skipping a Sales Order too .Invoice from sales order: Creating invoice from sales order is very easy and simple. User can create both manually and automatically.</p>
+<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User can create several number of invoice based on item quantity of that sales order.</p>
+<p style="margin-left:1in;">
+	-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User can create only one invoice automatically from a sales order.</p>
+<p style="margin-left:1in;">
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_19.png" style="width: 833px; height: 401px;"></p>
+<p>
+	New Invoice without sales Order:</p>
+<p>
+	The steps and requirements for creating an invoice directly are covered under Sales order entry.&nbsp;By default, this operation will not allow an invoice to be created if the stock level of any item will become less than 0. Invoice entry is directly related to item stock.Creating an invoice entry is almost same like <strong>Sales Order</strong> entry; just user needs to select a payment term as an affiliation.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_18.png" style="width: 836px; height: 589px;"></p>
+<p>
+	<strong>Notes:</strong></p>
+<p>
+	&nbsp;A direct invoice entry will generate an automatic sales order entry. When entering a direct sales invoice Sales Order will be created automatically.</p>
+<p>
+	<strong>Payment:</strong></p>
+<p>
+	There are different ways to record payments.</p>
+<p>
+	Cash</p>
+<p>
+	Bank</p>
+<p>
+	PayPal</p>
+<p>
+	Payment directly related with invoice, User can pay only from invoices.</p>
+<p>
+	There is both an option to pay full or partially.</p>
+<p>
+	Procedure:</p>
+<p>
+	Payment Type: Select payment type (Bank/Cash/PayPal) you prefer.</p>
+<p>
+	Amount: Enter amount you prefer (full/partial). Note: Excess payment will not refundable.&nbsp;</p>
+<p>
+	Paid On: Enter payment date.</p>
+<p>
+	Reference: A reference number will automatically generate.</p>
+<p>
+	There is an option to view, email, print and download PDF of payment receipt.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_22.png"></p>
+<p>
+	<strong>Shipment:</strong></p>
+<p>
+	Our powerful shipping integration feature can integrate your organization with a host of shipping service providers, enabling you to get shipping rates, ship your packed goods to your customer, track your shipments and manage your deliveries&nbsp;.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_32.png" style="width: 918px; height: 399px;"></p>
+<p>
+	User can shipment his product from invoice only.</p>
+<p>
+	There are two stages to complete a shipment procedure.</p>
+<p>
+	-Packed</p>
+<p>
+	-delivered</p>
+<p>
+	<img alt="" src=" http://techvill.net/img/inventory_img/shipment_invoice.png" style="width: 936px; height: 599px;"></p>
+<p>
+	Packed: When user creates a shipment from an invoice it automatically marked as packed.&nbsp; User can process shipment both manually and automatically.</p>
+<p>
+	Delivered:</p>
+<p>
+	&nbsp; You can mark the packages that have been shipped as delivered by clicking on&nbsp;Mark as Delivered&nbsp;button on shipment list. On doing so, your shipment status changes from packed to deliver.</p>
+<p>
+	There is an option to view, modify, email, print and download PDF of shipment receipt.</p>
+<p>
+	Note: Mark your shipment status delivered after confirming delivery report from your client. &nbsp;</p>
+</section>
+<section id="customers">
+	<div class="page-header"><h3>Customers</h3><hr class="notop"></div>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">This is to manage all customers who are purchasing items/products from this selected company.</span><span class="apple-converted-space"><span style="font-size: 9pt; font-family: Arial, sans-serif;">&nbsp;</span></span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span class="apple-converted-space"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><img alt="" src="assets/images/image_11.png" style="width: 933px; height: 566px;"></span></span><span style="font-size: 9pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">There are two different way to create new customer. Admin can create customer by both manually and by uploading CSV files.<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">For manually adding new customer there is a customer create form which needs customer&#39;s name, email , address and phone number .<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">Admin can import CSV file. There is an option to download customer list in CSV format.<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">Before Importing one can download a sample CSV file to maintain format of uploading customer list and it is obligatory to input unique email address for each and every individual customer.<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">Admin has permission of add, edit and delete customers.</span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;"><img alt="" src="assets/images/image_6.png" style="width: 628px; height: 412px;"></span></p>
+</section>
+<section id="customer_panel">
+	<div class="page-header"><h3>Customer Panel</h3><hr class="notop"></div>
+<p>
+	Each customer have his/her own panel and he/she will able to login from his/her panel .&nbsp;</p>
+<p>
+	Customer panel link:&nbsp;http://www.stockpile.techvill.net/customer</p>
+<p>
+	login procedure:</p>
+<p>
+	Input your email and password to login.</p>
+<p>
+	login Page:</p>
+<p>
+	<img alt="" src="assets/images/image_5.png"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>Customer Dashboard:&nbsp;</strong></p>
+<p>
+	Customer dashboard shows customers sales order list , invoice list , payment list , shipment list and customer branch list.</p>
+<p>
+	<img alt="" src="assets/images/image_10.png"></p>
+<p>
+	&nbsp;</p>
+<p>
+	Customer can view his/her sales odrer , invoice , payment and shipment history.</p>
+<p>
+	Customer sales order:</p>
+<p>
+	<img alt="" src="assets/images/image_12.png"></p>
+<p>
+	Customer can view his/her branches and can edit branch addresses&nbsp;from here as well.&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_8.png"></p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="suppliers">
+	<div class="page-header"><h3>Suppliers </h3><hr class="notop"></div>
+<p>
+	<span style="color: rgb(29, 33, 41); font-family: helvetica, arial, sans-serif; white-space: pre-wrap;">This is almost similar to customers. Admin can create suppliers for his/her company by inputting supplier&#39;s name, email, address and phone number. </span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: rgb(29, 33, 41); font-family: helvetica, arial, sans-serif; white-space: pre-wrap;"><img alt="" src="assets/images/image_7.png" style="width: 1120px; height: 464px;"></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">There are two different way to create new supplier. Admin can create supplier by both manually and by uploading CSV files.<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">For manually adding new supplier there is a supplier create form which needs supplier&#39;s name, email , address and phone number .<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">Admin can import CSV file. There is an option to download supplier list in CSV format.<o:p></o:p></span></p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;">Before Importing one can download a sample CSV file to maintain format of uploading supplier list and it is obligatory to input unique email address for each and every individual supplier.</span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size: 9pt; font-family: Arial, sans-serif;"><img alt="" src="assets/images/image_34.png"></span></p>
+<p>
+	<span style="font-family: Arial, sans-serif; font-size: 9pt;">Admin has permission of add, edit and delete suppliers.</span></p>
+</section>
+<section id="reports">
+	<div class="page-header"><h3>Reports</h3><hr class="notop"></div>
+<div>
+	<strong>INVENTORY STOCK ON HAND</strong></div>
+<p style="margin-left:.5in;">
+	Inventory stock on hand is to show all items quantity on stock, cost value and retail value profit value of inventory.</p>
+<p style="margin-left:.25in;">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It shows both total values of entire stock and individual total values of each item too.</p>
+<p style="margin-left:.5in;">
+	User can filter product by item category and location.</p>
+<p style="margin-left:.5in;">
+	A CSV and PDF file download option is available to download entire inventory stock on hand report.</p>
+<p style="margin-left:.5in;">
+	&nbsp;</p>
+<p style="margin-left:.5in;">
+	<img alt="" src="assets/images/image_21.png"></p>
+<p>
+	<strong>SALES REPORT</strong></p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sales report deals only with all sales order of inventory.</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It shows day wise sales order with sales volume and sales value.</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User can filter his/her search by specific date interval.</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A CSV and PDF file download option is available to download all sales order report together.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_31.png" style="width: 813px; height: 314px;"></p>
+<p>
+	<strong>SALES HISTORY REPORT</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><img alt="" src="assets/images/image_28.png" style="width: 789px; height: 426px;"></strong></p>
+</section>
+<section id="settings">
+	<div class="page-header"><h3>Settings</h3><hr class="notop"></div>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<strong>General Setings:</strong></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<strong><img alt="" src="assets/images/image_16.png"></strong></p>
+<p>
+	Item category: Multi vendor stock management system can manage items of different category. Admin can create different categories with appropriate units.</p>
+<p>
+	Unit: Create different units with proper abbreviation.</p>
+<p>
+	Company: &nbsp;Stock management system is friendly for multiple company. Each company has separate database with different name. Input unique database information for each company.</p>
+<p>
+	With completion of&nbsp;installation&nbsp;a default company will be created automatically &amp; from this default company admin can create more companies. But, from new companies there is no option to create new companies anymore.</p>
+<p>
+	&nbsp;</p>
+<div>
+	<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+		<span style="font-size: 9pt; font-family: Arial, sans-serif; color: rgb(29, 33, 41);"><strong>Preference: </strong>Admin can set default language , number of rows shown in page , date format , date separetor , site name and site short name from here for his company.&nbsp;</span></p>
+	<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+		&nbsp;</p>
+	<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+		&nbsp;</p>
+	<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+		<img alt="" src="assets/images/image_23.png" style="width: 528px; height: 330px;"></p>
+	<div>
+		<strong>Email templete:&nbsp;</strong>&nbsp;Add a personal touch to your invoices, order notifications and thank you mails. Make sure your clients and vendors perceive your care and commitment better, customize your emails to suit your business needs and the tone of your communication.</div>
+	<div>
+		Guide layout:</div>
+	<div>
+		Configuring email template</div>
+	<div>
+		Associating a default template for a contact</div>
+	<div>
+		Customizing email templates</div>
+	<div>
+		<div>
+			Here you can choose the module for which you wish to customize the template for:</div>
+		<div>
+			Shipment Information</div>
+		<div>
+			Payment receipt</div>
+		<div>
+			Purchase order</div>
+		<div>
+			Sales invoice</div>
+		<div>
+			Sales order</div>
+		<div>
+			&nbsp;</div>
+		<div>
+			<img alt="" src="assets/images/image_14.png" style="width: 787px; height: 468px;"></div>
+		<div>
+			&nbsp;</div>
+		<div>
+			<span style="font-family: inherit; color: rgb(56, 56, 56); margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; vertical-align: baseline;">Finance:</span></div>
+		<div>
+			<span style="font-family: inherit; color: rgb(56, 56, 56); margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; vertical-align: baseline;">&nbsp;</span><span style="background-color: rgb(238, 238, 238); color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif;">Manage finance settings by individually setting bellow types.</span></div>
+	</div>
+</div>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Tax:</span></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Define all tax types by mention tax rates.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	User can select any tax type as default and user can create as much tax type as they need.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	And, user has permission to modify and delete any tax type.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Note: Before using sales tax in your transactions, you need to create a new tax.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Sales Type:</span></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Sales Types allow you to define pricing levels for specific type&rsquo;s customers. A very common separation is between retail and wholesale customers.&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Here sales type is differ by tax. (Included or not)</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Can set any sales type as default according to need.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Currency:</span></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Stockpile is a multicurrency system and it&rsquo;s simple to manage all the currencies you deal with. Add currency&rsquo;s with appropriate symbol.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Payment Term:</span></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Set the payment terms for both customers and suppliers. Use them in invoices. Type in a description for the terms you wish to enforce to your customers or have been set by your suppliers. According to payment date/due date user can create several payment terms and use them for making easy his/her payment procedure.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Create a payment term:</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Term: name or description for the terms.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Due Day: payment date.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Default: select yes/no to make this payment term default or not.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Example:</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Description &ndash; net 15<br>
+	Due Days &ndash; 15</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Default &ndash; No</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	User can modify or delete any payment term.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 700; font-style: inherit; font-family: inherit; vertical-align: baseline;">Payment Method:</span></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Payment method is nothing but the different ways of paying product cost. There are several ways of payment like- Bank, card, Cash, PayPal etc.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	User has permission to modify and delete payment method.</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<img alt="" src="assets/images/image_15.png" style="width: 814px; height: 305px;"></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<strong>Company Details:</strong></p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	&nbsp;</p>
+<p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	Company settings:</p>
+<div style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56); background-color: rgb(238, 238, 238);">
+	<p>
+		Team members: Admin can create multiple users by selecting different user role (Creating user role is a must before creating new user).</p>
+	<p>
+		In new user creation from all fields are mandatory for creating a new user.</p>
+	<p>
+		Provide full name, email, password, phone number and select specific user role for a user.</p>
+	<p>
+		Admin needs to input unique email address for each user and can set passwords for user login.</p>
+	<p>
+		User Roles: Stock management system is multi user friendly. Admin can create multiple roles by specifying permissions of add, edit and delete functionality.</p>
+	<p>
+		Locations:&nbsp;Locations are important to manage stock movement. Admin can add several locations from here by inputting location code, location name, delivery address, phone numbers &amp; contact person name.</p>
+	<p>
+		&nbsp;</p>
+	<p>
+		<img alt="" src="assets/images/image_9.png"  ></p>
+</div>
+<p>
+	&nbsp; &nbsp;</p>
+</section>
+
+	</div>
+</body>
+</html>
